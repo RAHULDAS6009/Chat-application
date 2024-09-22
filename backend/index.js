@@ -4,12 +4,14 @@ const userRouter = require("./routes/user")
 const chatRouter=require("./routes/chat")
 const messagesRouter=require("./routes/messages")
 const app=express();
+const cors=require("cors")
 
 require('dotenv').config();
 connectDB();
 
 //parse into json format
 app.use(express.json());
+app.use(cors())
 
 //routes
 app.use("/api/v1/user/",userRouter);

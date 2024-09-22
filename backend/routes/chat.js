@@ -9,7 +9,8 @@ const {
 } = require("../controller/chat");
 
 const router = express.Router();
-import {protect} from "../middleware/authMiddleware"
+const { protect } = require("../middleware/authMiddleware");
+
 
 
 //all routess should be protected

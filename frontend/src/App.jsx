@@ -1,8 +1,17 @@
-
+import { Route, Routes } from "react-router-dom";
+import  ChatPage  from "./pages/ChatPage";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 const App = () => {
   return (
-    <div className="text-3xl font-bold underline">Hello world</div>
-  )
-}
+    <div>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/chat" element={<ChatPage />} />
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;

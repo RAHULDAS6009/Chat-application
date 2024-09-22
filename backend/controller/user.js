@@ -3,6 +3,7 @@ const asyncHandlers = require("express-async-handler");
 const generateToken = require("../config/generateToken");
 
 const register = asyncHandlers(async (req, res) => {
+  
   const { name, email, password, pic } = req.body;
 
   // Check if all required fields are present
